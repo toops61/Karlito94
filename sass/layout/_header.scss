@@ -1,5 +1,19 @@
-header {
-    margin: 2rem auto;
-    width: 80%;
+header nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+        display: flex;
+        margin: 1rem auto;
+        font-size: clamp(1rem, 2.5vw, 4rem);
+        li {
+            margin: 0 1.5rem;
+            transition: 400ms;
+        }
+        li:hover {
+            transform: scale(1.4);
+            text-shadow: 4px 4px 8px white;
+        }
+    }
 }
+

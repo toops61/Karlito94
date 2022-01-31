@@ -1,6 +1,6 @@
-@mixin position ($top: 0px, $right: 0px) {
+@mixin position ($top: 0px, $left: 0px) {
     top: $top;
-    right: $right;
+    right: $left;
 }
 
 @mixin positionTRBL ($top: 0px, $right: 0px, $bottom: 0px, $left: 0px) {
@@ -10,11 +10,15 @@
     left: $left;
 }
 
+@mixin blury-shadow ($offsetX: 0px, $offsetY: 0px, $blur: 18px, $spread: 5px){
+    box-shadow: $offsetX $offsetY $blur $spread black inset;
+}
+
 @mixin btn-shadow ($offsetX: 2px, $offsetY: 2px, $blur: 14px)  {
     box-shadow: $offsetX $offsetY $blur darken($fourth-color,30%);
 }
 
-@mixin flex-column {
+@mixin flexColumn {
     display: flex;
     flex-direction: column;
     align-items: center;

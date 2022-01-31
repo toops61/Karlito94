@@ -1,0 +1,584 @@
+@keyframes bouncing {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2rem);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flatware-anim {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 2rem);
+  }
+  50% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  20% {
+    transform: rotate -10deg;
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  80% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0) scale(1.5);
+  }
+}
+@keyframes clignote {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.4);
+  }
+  50% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Font Awesome 5";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fonts/fa-solid-900.eot");
+  src: url("../fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff"), url("../fonts/fa-solid-900.ttf") format("truetype"), url("../fonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+@font-face {
+  font-family: "Font Awesome 5 empty";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/fa-regular-400.eot");
+  src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.woff") format("woff"), url("../fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+@font-face {
+  font-family: "Font Awesome 5 brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/fa-brands-400.eot");
+  src: url("../fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.woff") format("woff"), url("../fonts/fa-brands-400.ttf") format("truetype"), url("../fonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+* {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: clamp(1.4rem, 10vw, 12rem);
+}
+
+h2 {
+  font-size: clamp(1.2rem, 5vw, 6rem);
+  margin: 1rem auto;
+}
+
+.arrow-up {
+  display: none;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.arrow-up.appears {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-up div {
+  color: white;
+}
+.arrow-up div::before {
+  content: "\f077";
+  font-family: "Font Awesome 5";
+  font-weight: 900;
+  font-size: 1.4em;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: solid #676bc0;
+  color: #676bc0;
+  background-color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px black;
+  width: 4rem;
+  height: 1.2rem;
+  transition: transform 0.5s ease-in;
+}
+.btn:hover {
+  transform: scale(1.3);
+}
+
+.btn-onOff {
+  position: relative;
+  background-color: #75e391;
+  display: flex;
+  align-items: center;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 20px;
+  border: solid black;
+}
+.btn-onOff__switch {
+  background-color: #18742f;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: solid black;
+  transition: transform 300ms ease-in;
+  margin-left: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-onOff__switch.switched {
+  transform: translateX(2rem);
+}
+
+.icones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coeur {
+  margin: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coeur div::before {
+  content: "\f004";
+  font-family: "Font Awesome 5";
+  font-weight: 900;
+  font-size: 2rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #a32913;
+}
+.coeur div:hover {
+  animation: clignote 2s ease-in-out infinite forwards;
+}
+
+.death {
+  margin: 2rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.death div::before {
+  content: "\f714";
+  font-family: "Font Awesome 5";
+  font-weight: 900;
+  font-size: 2rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: white;
+}
+.death div:hover {
+  animation: clignote 2s ease-in-out infinite forwards;
+}
+
+.reseaux__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: solid #676bc0;
+  color: #676bc0;
+  background-color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px black;
+  width: 9rem;
+  height: 2.3rem;
+  text-shadow: none;
+  border: solid black;
+}
+.reseaux__btn__logo {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.reseaux__btn h3 {
+  margin-left: 0.2rem;
+  font-size: 1.4rem;
+  color: black;
+}
+.reseaux__btn:hover {
+  animation: shake 1s ease-in-out forwards;
+}
+
+#twitter .reseaux__btn__logo div::before {
+  content: "\f081";
+  font-family: "Font Awesome 5 brands";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #00acee;
+}
+
+#facebook .reseaux__btn__logo div::before {
+  content: "\f09a";
+  font-family: "Font Awesome 5 brands";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #3b5998;
+}
+
+#instagram .reseaux__btn__logo div::before {
+  content: "\e055";
+  font-family: "Font Awesome 5 brands";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  background: -webkit-linear-gradient(49.2deg, #f9ed32 10%, #ee2a7b 55%, #002aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#linkedin .reseaux__btn__logo div::before {
+  content: "\f08c";
+  font-family: "Font Awesome 5 brands";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #007BB5;
+}
+
+#tiktok .reseaux__btn__logo {
+  background-color: black;
+  border-radius: 5px;
+}
+#tiktok .reseaux__btn__logo::after {
+  content: "\e07b";
+  font-family: "Font Awesome 5 brands";
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #ff0050;
+}
+#tiktok .reseaux__btn__logo div::before {
+  content: "\e07b";
+  font-family: "Font Awesome 5 brands";
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  position: absolute;
+  color: #00f2ea;
+  top: 4px;
+  right: 7px;
+}
+#tiktok .reseaux__btn__logo div::after {
+  content: "\e07b";
+  font-family: "Font Awesome 5 brands";
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  position: absolute;
+  color: white;
+  top: 5px;
+  right: 5px;
+}
+
+#youtube .reseaux__btn__logo div::before {
+  content: "\f167";
+  font-family: "Font Awesome 5 brands";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: #c4302b;
+}
+
+.container {
+  height: 100vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  margin: 1rem auto;
+  font-size: clamp(1rem, 2.5vw, 4rem);
+}
+header nav ul li {
+  margin: 0 1.5rem;
+  transition: 400ms;
+}
+header nav ul li:hover {
+  transform: scale(1.4);
+  text-shadow: 4px 4px 8px white;
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 2rem;
+  background-color: black;
+}
+
+.hidden {
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+.disk {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  margin: 0 1rem;
+}
+.disk img {
+  object-fit: contain;
+}
+
+.disk:nth-child(1) {
+  animation: bouncing 600ms infinite 0ms ease-out alternate;
+}
+
+.disk:nth-child(2) {
+  animation: bouncing 600ms infinite 100ms ease-out alternate;
+}
+
+.disk:nth-child(3) {
+  animation: bouncing 600ms infinite 200ms ease-out alternate;
+}
+
+.tabs {
+  width: 90%;
+  max-width: 40rem;
+  display: flex;
+}
+.tabs li {
+  border: solid #165254;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+  padding: 1rem;
+}
+.tabs li a {
+  color: #165254;
+}
+.tabs__content {
+  display: none;
+  padding: 1rem;
+}
+.tabs__content.active {
+  display: block;
+  background-color: #165254;
+  color: white;
+}
+.tabs .active {
+  background-color: #165254;
+  color: white;
+}
+.tabs .active a {
+  color: white;
+}
+
+.background {
+  z-index: -99;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10vw 9vw black inset;
+  background: url(../img/karlito-bg.jpeg) fixed no-repeat;
+  background-size: 100%;
+  opacity: 0.6;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#bio, #photos, #videos, #disco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+#bio p, #photos p, #videos p, #disco p {
+  margin: 0 10%;
+  text-align: justify;
+}
+
+.album-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 25rem;
+}
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div[class^=LP] {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div[class^=LP] p {
+  font-size: clamp(1.2rem, 2vw, 3rem);
+}
+
+#videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videos__player {
+  display: block;
+  border: none;
+  max-width: 80rem;
+  max-height: 45rem;
+  width: 90vw;
+  height: 50vw;
+  margin: 1rem auto;
+}
+
+/*# sourceMappingURL=style.css.map */
