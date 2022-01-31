@@ -1,0 +1,19 @@
+{
+  "name": "karlito",
+  "version": "1.0.0",
+  "description": "Karlito-official",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toops61/Karlito94.git"
+  },
+  "author": "Toops61",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toops61/Karlito94/issues"
+  },
+  "homepage": "https://github.com/toops61/Karlito94#readme"
+}
