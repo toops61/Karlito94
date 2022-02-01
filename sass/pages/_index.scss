@@ -74,21 +74,19 @@ div[class^="LP"] {
     }
 }
 
-#videos {
-    @extend #bio;
+#links {
     @include flexColumn;
+    width: 100%;
+    nav {
+        width: 90%;
+    }
 }
 
-.videos__player {
-    display: block;
-    border: none;
-    max-width: 80rem;
-    max-height: 45rem;
-    width: 90vw;
-    height: 50vw;
-    margin: 1rem auto;
-}
-
-#photos {
-    @extend #bio;
+.links-reseaux {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2vw auto;
+    width: 80%;
 }

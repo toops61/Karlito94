@@ -121,6 +121,17 @@ h2 {
   opacity: 1;
 }
 
+.button-reseaux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: solid white;
+  background-color: black;
+  border-radius: 30px;
+  margin: 0 1vw;
+}
+
 .container {
   height: 100vh;
 }
@@ -235,14 +246,14 @@ header nav ul li:hover {
   justify-content: center;
 }
 
-#bio, #photos, #videos, #disco {
+#bio, #disco {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
 }
-#bio p, #photos p, #videos p, #disco p {
+#bio p, #disco p {
   margin: 0 10%;
   text-align: justify;
 }
@@ -301,20 +312,23 @@ div[class^=LP] p {
   object-fit: cover;
 }
 
-#videos {
+#links {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+#links nav {
+  width: 90%;
 }
 
-.videos__player {
-  display: block;
-  border: none;
-  max-width: 80rem;
-  max-height: 45rem;
-  width: 90vw;
-  height: 50vw;
-  margin: 1rem auto;
+.links-reseaux {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2vw auto;
+  width: 80%;
 }
 
 /*# sourceMappingURL=style.css.map */
