@@ -34,7 +34,7 @@
     @extend #bio;
     button {
         @include btn;
-        transition: 300ms ease-in-out;
+        transition: 400ms ease-in-out;
     }
     p {
         font-size: clamp(1rem, 1.5vw, 2rem);
@@ -42,6 +42,7 @@
     }
     button:hover {
         background-color: white;
+        transform: scale(1.3);
     }
     button:hover > p {
         color: black;
