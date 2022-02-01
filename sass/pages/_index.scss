@@ -17,6 +17,19 @@
     align-items: center;
     justify-content: center;
 }
+#news {
+ @include flexColumn;
+}
+
+.news-square {
+    border: solid white;
+    padding: 2vw;
+    border-radius: 1rem;
+    background-color: black;
+    p {
+        margin: 0;
+    }
+}
 
 #bio {
     display: flex;
@@ -89,4 +102,7 @@ div[class^="LP"] {
     flex-wrap: wrap;
     margin: 2vw auto;
     width: 80%;
+    p {
+        margin: 0 1vw;
+    }
 }

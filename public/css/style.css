@@ -136,6 +136,10 @@ h2 {
   height: 100vh;
 }
 
+footer {
+  height: 3vw;
+}
+
 header nav {
   display: flex;
   justify-content: center;
@@ -246,6 +250,22 @@ header nav ul li:hover {
   justify-content: center;
 }
 
+#news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-square {
+  border: solid white;
+  padding: 2vw;
+  border-radius: 1rem;
+  background-color: black;
+}
+.news-square p {
+  margin: 0;
+}
+
 #bio, #disco {
   display: flex;
   flex-direction: column;
@@ -329,6 +349,9 @@ div[class^=LP] p {
   flex-wrap: wrap;
   margin: 2vw auto;
   width: 80%;
+}
+.links-reseaux p {
+  margin: 0 1vw;
 }
 
 /*# sourceMappingURL=style.css.map */
