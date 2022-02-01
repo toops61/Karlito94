@@ -257,34 +257,34 @@ header nav ul li:hover {
   align-items: center;
 }
 
-.news-square {
+.news-square, .press-container {
   border: solid white;
   padding: 2vw;
   border-radius: 1rem;
   background-color: black;
 }
-.news-square p {
+.news-square p, .press-container p {
   margin: 0;
 }
 
-#bio, #disco {
+#bio, #press, #disco {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
 }
-#bio .bio-container, #disco .bio-container {
+#bio .bio-container, #press .bio-container, #disco .bio-container {
   margin: 0 10%;
 }
-#bio .bio-container p, #disco .bio-container p {
+#bio .bio-container p, #press .bio-container p, #disco .bio-container p {
   text-align: justify;
 }
-#bio .bio-container .mafiak1fry, #disco .bio-container .mafiak1fry {
+#bio .bio-container .mafiak1fry, #press .bio-container .mafiak1fry, #disco .bio-container .mafiak1fry {
   float: left;
   height: 20vw;
 }
-#bio .bio-container .mafiak1fry img, #disco .bio-container .mafiak1fry img {
+#bio .bio-container .mafiak1fry img, #press .bio-container .mafiak1fry img, #disco .bio-container .mafiak1fry img {
   height: 100%;
   object-fit: cover;
 }
@@ -340,6 +340,62 @@ div[class^=LP] p {
 .album-cover img {
   height: 100%;
   object-fit: cover;
+}
+
+.collab-section {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: solid 0.2rem white;
+  margin: 2vw auto;
+}
+
+.more {
+  display: flex;
+}
+
+.mafiak1fry-collabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.albums-collab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vw 2vw;
+}
+.albums-collab__cd {
+  height: 18vw;
+  min-height: 10rem;
+}
+.albums-collab__cd img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.other-collabs {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.other-collabs.more {
+  display: flex;
+}
+.other-collabs .albums-collab {
+  width: 15vw;
+}
+.other-collabs .albums-collab__cd {
+  height: 15vw;
+}
+.other-collabs p {
+  text-align: center;
+  font-size: 1rem;
 }
 
 #links {
@@ -450,42 +506,6 @@ div[class^=LP] p {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
-}
-
-.collab-section {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  border: solid 0.2rem white;
-  margin: 2vw auto;
-}
-
-.more {
-  display: flex;
-}
-
-.mafiak1fry-collabs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.albums-collab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1vw 2vw;
-}
-.albums-collab__cd {
-  height: 18vw;
-  min-height: 10rem;
-}
-.albums-collab__cd img {
-  height: 100%;
-  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

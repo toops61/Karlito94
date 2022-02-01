@@ -34,3 +34,9 @@ function showCollabs() {
 }
 
 document.querySelector('.collabs-button').addEventListener('click', showCollabs);
+
+function showOthersCollabs() {
+    document.querySelector('.other-collabs').classList.toggle('more');
+}
+
+document.querySelector('.others').addEventListener('click', showOthersCollabs);
