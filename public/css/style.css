@@ -139,11 +139,12 @@ a {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 2vw, 10rem);
 }
 
 h1 {
-  font-size: clamp(1.4rem, 10vw, 12rem);
+  font-size: clamp(3rem, 20vw, 30rem);
+  margin: 2vw auto;
 }
 
 h2 {
@@ -179,243 +180,6 @@ h2 {
   line-height: 1;
 }
 
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  border: solid #676bc0;
-  color: #676bc0;
-  background-color: white;
-  text-shadow: 1px 1px 1px black;
-  border-radius: 30px;
-  box-shadow: 2px 2px 8px black;
-  width: 4rem;
-  height: 1.2rem;
-  transition: transform 0.5s ease-in;
-}
-.btn:hover {
-  transform: scale(1.3);
-}
-
-.btn-onOff {
-  position: relative;
-  background-color: #75e391;
-  display: flex;
-  align-items: center;
-  width: 4rem;
-  height: 2rem;
-  border-radius: 20px;
-  border: solid black;
-}
-.btn-onOff__switch {
-  background-color: #18742f;
-  color: white;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border: solid black;
-  transition: transform 300ms ease-in;
-  margin-left: -3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn-onOff__switch.switched {
-  transform: translateX(2rem);
-}
-
-.icones {
-  display: flex;
-  justify-content: space-between;
-}
-
-.coeur {
-  margin: 2rem;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.coeur div::before {
-  content: "\f004";
-  font-family: "Font Awesome 5";
-  font-weight: 900;
-  font-size: 2rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  color: #a32913;
-}
-.coeur div:hover {
-  animation: clignote 2s ease-in-out infinite forwards;
-}
-
-.death {
-  margin: 2rem;
-  width: 4rem;
-  height: 4rem;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.death div::before {
-  content: "\f714";
-  font-family: "Font Awesome 5";
-  font-weight: 900;
-  font-size: 2rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  color: white;
-}
-.death div:hover {
-  animation: clignote 2s ease-in-out infinite forwards;
-}
-
-.reseaux__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  border: solid #676bc0;
-  color: #676bc0;
-  background-color: white;
-  text-shadow: 1px 1px 1px black;
-  border-radius: 30px;
-  box-shadow: 2px 2px 8px black;
-  width: 9rem;
-  height: 2.3rem;
-  text-shadow: none;
-  border: solid black;
-}
-.reseaux__btn__logo {
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.reseaux__btn h3 {
-  margin-left: 0.2rem;
-  font-size: 1.4rem;
-  color: black;
-}
-.reseaux__btn:hover {
-  animation: shake 1s ease-in-out forwards;
-}
-
-#twitter .reseaux__btn__logo div::before {
-  content: "\f081";
-  font-family: "Font Awesome 5 brands";
-  font-weight: 400;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  color: #00acee;
-}
-
-#facebook .reseaux__btn__logo div::before {
-  content: "\f09a";
-  font-family: "Font Awesome 5 brands";
-  font-weight: 400;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  color: #3b5998;
-}
-
-#instagram .reseaux__btn__logo div::before {
-  content: "\e055";
-  font-family: "Font Awesome 5 brands";
-  font-weight: 400;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  background: -webkit-linear-gradient(49.2deg, #f9ed32 10%, #ee2a7b 55%, #002aff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#linkedin .reseaux__btn__logo div::before {
-  content: "\f08c";
-  font-family: "Font Awesome 5 brands";
-  font-weight: 400;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  color: #007BB5;
-}
-
-#tiktok .reseaux__btn__logo {
-  background-color: black;
-  border-radius: 5px;
-}
-#tiktok .reseaux__btn__logo::after {
-  content: "\e07b";
-  font-family: "Font Awesome 5 brands";
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  color: #ff0050;
-}
-#tiktok .reseaux__btn__logo div::before {
-  content: "\e07b";
-  font-family: "Font Awesome 5 brands";
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  position: absolute;
-  color: #00f2ea;
-  top: 4px;
-  right: 7px;
-}
-#tiktok .reseaux__btn__logo div::after {
-  content: "\e07b";
-  font-family: "Font Awesome 5 brands";
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  position: absolute;
-  color: white;
-  top: 5px;
-  right: 5px;
-}
-
-#youtube .reseaux__btn__logo div::before {
-  content: "\f167";
-  font-family: "Font Awesome 5 brands";
-  font-weight: 400;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  color: #c4302b;
-}
-
 .container {
   height: 100vh;
 }
@@ -428,10 +192,10 @@ header nav {
 header nav ul {
   display: flex;
   margin: 1rem auto;
-  font-size: clamp(1rem, 2.5vw, 4rem);
+  font-size: clamp(1rem, 2.5vw, 6rem);
 }
 header nav ul li {
-  margin: 0 1.5rem;
+  margin: 0 1.5vw;
   transition: 400ms;
 }
 header nav ul li:hover {
@@ -518,7 +282,7 @@ header nav ul li:hover {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 10vw 9vw black inset;
-  background: url(../img/karlito-bg.jpeg) fixed no-repeat;
+  background: url(../img/karlito-bg.webp) fixed no-repeat;
   background-size: 100%;
   opacity: 0.6;
 }
@@ -542,27 +306,54 @@ header nav ul li:hover {
   text-align: justify;
 }
 
-.album-cover {
+#disco button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  height: 25rem;
+  padding: 0.5rem 1rem;
+  border: solid white;
+  background-color: black;
+  border-radius: 30px;
+  transition: 300ms ease-in-out;
 }
-.album-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#disco p {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  transition: 300ms ease-in-out;
+}
+#disco button:hover {
+  background-color: white;
+}
+#disco button:hover > p {
+  color: black;
+}
+
+.covers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 div[class^=LP] {
-  margin: 1rem auto;
+  margin: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 div[class^=LP] p {
   font-size: clamp(1.2rem, 2vw, 3rem);
+}
+
+.album-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26vw;
+}
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #videos {

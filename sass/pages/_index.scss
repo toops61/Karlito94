@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     @include blury-shadow(0px, 0px, 10vw, 9vw);
-	background: url(../img/karlito-bg.jpeg) fixed no-repeat;
+	background: url(../img/karlito-bg.webp) fixed no-repeat;
 	background-size: 100%;
     opacity: .6;
 }
@@ -32,22 +32,40 @@
 
 #disco {
     @extend #bio;
+    button {
+        @include btn;
+        transition: 300ms ease-in-out;
+    }
+    p {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        transition: 300ms ease-in-out;
+    }
+    button:hover {
+        background-color: white;
+    }
+    button:hover > p {
+        color: black;
+    }
+}
+
+.covers {
+    @include flexCenter;
+    flex-wrap: wrap;
+}
+
+div[class^="LP"] {
+    margin: 1rem 2rem;
+    @include flexColumn;
+    p {
+        font-size: clamp(1.2rem, 2vw, 3rem);
+    }
 }
 
 .album-cover {
     @include flexCenter;
-    width: 25rem;
-    height: 25rem;
+    height: 26vw;
     img {
         @include imageFit;
-    }
-}
-
-div[class^="LP"] {
-    margin: 1rem auto;
-    @include flexColumn;
-    p {
-        font-size: clamp(1.2rem, 2vw, 3rem);
     }
 }
 

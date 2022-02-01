@@ -35,11 +35,12 @@ a {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 2vw, 10rem);
 }
 
 h1 {
-  font-size: clamp(1.4rem, 10vw, 12rem);
+  font-size: clamp(3rem, 20vw, 30rem);
+  margin: 2vw auto;
 }
 
 h2 {
