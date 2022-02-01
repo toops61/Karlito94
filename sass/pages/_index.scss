@@ -37,10 +37,19 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
-    p {
+    .bio-container {
         margin: 0 10%;
-        text-align: justify;
+        p {
+            
+            text-align: justify;
+        }
+        .mafiak1fry {
+            img {
+                float: left;
+            }
+        }
     }
+    
 }
 
 #disco {
@@ -96,13 +105,59 @@ div[class^="LP"] {
 }
 
 .links-reseaux {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexCenter;
     flex-wrap: wrap;
     margin: 2vw auto;
-    width: 80%;
-    p {
+    width: 90%;
+    a {
         margin: 0 1vw;
+        font-size: clamp(1rem, 1.6vw, 10rem);
+        text-shadow: 1px 1px 2px black;
+    }
+}
+
+.button-reseaux {
+    transition: 400ms ease-in-out;
+    @include flexCenter;
+    &:hover, &:focus {
+        transform: scaleX(1.3) scaleY(1.2);
+    }
+    a::before {
+        margin: 0 .5vw;
+    } 
+}
+.button-reseaux:nth-child(1) {
+    background-color: $facebook-color;
+    &::before {
+        @include iconBrands ("\f09a", 1.8vw);
+    }
+}
+.button-reseaux:nth-child(2) {
+    background-color: $linktree-color;
+}
+
+.linktree-img {
+    height: 2vw;
+    img {
+        @include imageFit;
+    }
+}
+
+.button-reseaux:nth-child(3) {
+    background-color: $youtube-color;
+    &::before {
+        @include iconBrands ("\f167", 2.2vw);
+    }
+}
+.button-reseaux:nth-child(4) {
+    @include instagramColor;
+    &::before {
+        @include iconBrands ("\f16d", 2.2vw);
+    }
+}
+.button-reseaux:nth-child(5) {
+    background-color: $twitter-color;
+    &::before {
+        @include iconBrands ("\f099", 1.8vw);
     }
 }

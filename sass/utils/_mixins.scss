@@ -48,6 +48,7 @@
 
 @mixin iconBrands ($content: "\f09a", $font-size: 1.2vw) {
     content: $content;
+    display: block;
     font-family: 'Font Awesome 5 brands';
     font-weight: 400;
     font-size: $font-size;
