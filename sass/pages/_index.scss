@@ -40,12 +40,13 @@
     .bio-container {
         margin: 0 10%;
         p {
-            
             text-align: justify;
         }
         .mafiak1fry {
+            float: left;
+            height: 20vw;
             img {
-                float: left;
+                @include imageFit
             }
         }
     }
@@ -129,7 +130,7 @@ div[class^="LP"] {
 .button-reseaux:nth-child(1) {
     background-color: $facebook-color;
     &::before {
-        @include iconBrands ("\f09a", 1.8vw);
+        @include iconBrands ("\f09a", clamp(1.4rem, 1.8vw, 15rem));
     }
 }
 .button-reseaux:nth-child(2) {
@@ -138,6 +139,7 @@ div[class^="LP"] {
 
 .linktree-img {
     height: 2vw;
+    min-height: 1.4rem;
     img {
         @include imageFit;
     }
@@ -146,18 +148,18 @@ div[class^="LP"] {
 .button-reseaux:nth-child(3) {
     background-color: $youtube-color;
     &::before {
-        @include iconBrands ("\f167", 2.2vw);
+        @include iconBrands ("\f167", clamp(1.6rem, 2.2vw, 15rem));
     }
 }
 .button-reseaux:nth-child(4) {
     @include instagramColor;
     &::before {
-        @include iconBrands ("\f16d", 2.2vw);
+        @include iconBrands ("\f16d", clamp(1.6rem, 2.2vw, 15rem));
     }
 }
 .button-reseaux:nth-child(5) {
     background-color: $twitter-color;
     &::before {
-        @include iconBrands ("\f099", 1.8vw);
+        @include iconBrands ("\f099", clamp(1.4rem, 1.8vw, 15rem));
     }
 }
