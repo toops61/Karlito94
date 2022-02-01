@@ -163,3 +163,34 @@ div[class^="LP"] {
         @include iconBrands ("\f099", clamp(1.4rem, 1.8vw, 15rem));
     }
 }
+
+.collab-section {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: solid .2rem white;
+    margin: 2vw auto;
+}
+
+.more {
+    display: flex;
+}
+
+.mafiak1fry-collabs {
+    @include flexCenter;
+    flex-wrap: wrap;
+}
+
+.albums-collab {
+    @include flexColumn;
+    margin: 1vw 2vw;
+    &__cd {
+        height: 18vw;
+        min-height: 10rem;
+        img {
+            @include imageFit;
+        }
+    }
+}

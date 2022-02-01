@@ -452,4 +452,40 @@ div[class^=LP] p {
   line-height: 1;
 }
 
+.collab-section {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: solid 0.2rem white;
+  margin: 2vw auto;
+}
+
+.more {
+  display: flex;
+}
+
+.mafiak1fry-collabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.albums-collab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vw 2vw;
+}
+.albums-collab__cd {
+  height: 18vw;
+  min-height: 10rem;
+}
+.albums-collab__cd img {
+  height: 100%;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=style.css.map */

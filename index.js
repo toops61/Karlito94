@@ -28,3 +28,9 @@ window.addEventListener('scroll', function () {
     }
 })
 document.getElementById('arrow-up').addEventListener('click', arrowUp);
+
+function showCollabs() {
+    document.querySelector('.collab-section').classList.toggle('more');
+}
+
+document.querySelector('.collabs-button').addEventListener('click', showCollabs);
