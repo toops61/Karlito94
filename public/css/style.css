@@ -351,8 +351,7 @@ div[class^=LP] p {
   border: solid 0.2rem white;
   margin: 2vw auto;
 }
-
-.more {
+.collab-section.more {
   display: flex;
 }
 
@@ -387,15 +386,13 @@ div[class^=LP] p {
 .other-collabs.more {
   display: flex;
 }
-.other-collabs .albums-collab {
-  width: 15vw;
-}
 .other-collabs .albums-collab__cd {
   height: 15vw;
 }
 .other-collabs p {
   text-align: center;
   font-size: 1rem;
+  width: 15vw;
 }
 
 #links {

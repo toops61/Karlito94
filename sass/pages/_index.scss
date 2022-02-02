@@ -105,11 +105,12 @@ div[class^="LP"] {
     background-color: black;
     border: solid .2rem white;
     margin: 2vw auto;
+    &.more {
+        display: flex;
+    }
 }
 
-.more {
-    display: flex;
-}
+
 
 .mafiak1fry-collabs {
     @include flexCenter;
@@ -136,15 +137,13 @@ div[class^="LP"] {
     &.more {
         display: flex;
     }
-    .albums-collab {
-        width: 15vw;
-        &__cd {
+    .albums-collab__cd {
             height: 15vw;
-        }
     }
     p {
         text-align: center;
         font-size: 1rem;
+        width: 15vw;
     }
 }
 
