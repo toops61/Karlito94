@@ -33,6 +33,13 @@ function showCollabs() {
     document.querySelector('.collab-section').classList.toggle('more');
 }
 
+function showBat7() {
+    document.querySelector('.maxi-big').classList.toggle('show-maxi');
+    document.querySelector('.background').classList.toggle('dark');
+    document.querySelector('.news-square').classList.toggle('translate-news');
+}
+document.querySelector('#news span').addEventListener('click', showBat7);
+
 function openBio() {
     document.querySelector('.bio__container').classList.toggle('open');
 }

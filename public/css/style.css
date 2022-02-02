@@ -289,6 +289,10 @@ header nav ul li:hover {
   background-size: 100%;
   opacity: 0.6;
 }
+.background.dark {
+  background-image: none;
+  background-color: black;
+}
 
 .main-page {
   display: flex;
@@ -309,21 +313,40 @@ header nav ul li:hover {
   padding: 2vw;
   border-radius: 1rem;
   background-color: black;
+  transform: translateY(0);
+  transition: 400ms;
 }
 .news-square p, .press__container p {
   margin: 0;
 }
+.news-square p span, .press__container p span, .news-square p a, .press__container p a {
+  cursor: grab;
+  text-shadow: 4px 4px 2px #F85A01;
+}
+.news-square.translate-news, .translate-news.press__container {
+  transform: translateY(15vh);
+}
 
 .maxi-big {
-  display: none;
   position: absolute;
-  right: 0;
   top: 0;
-  height: 100%;
+  width: 0;
+  height: 0;
+  transition: 500ms;
+  max-width: 100vw;
 }
 .maxi-big img {
   height: 100%;
   object-fit: cover;
+}
+.maxi-big.show-maxi {
+  width: auto;
+  height: 100%;
+}
+@media screen and (max-width: 400px) {
+  .maxi-big.show-maxi {
+    height: 40vh;
+  }
 }
 
 #bio, #press, #disco {
