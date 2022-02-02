@@ -99,7 +99,14 @@
     
 }
 
-.disco__container
+.disco__container {
+    height: 0;
+    overflow: hidden;
+    &.open {
+        opacity: 1;
+        height: auto;
+    }
+}
 
 .covers {
     @include flexCenter;

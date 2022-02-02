@@ -31,6 +31,26 @@
     transform: translate(0, 0);
   }
 }
+@keyframes left-appears {
+  from {
+    transform: translateX(-100vw);
+    opacity: O;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes right-appears {
+  from {
+    transform: translateX(100vw);
+    opacity: O;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -336,7 +356,16 @@ header nav ul li:hover {
   transition: 300ms ease-in-out;
 }
 
-.disco__container .covers {
+.disco__container {
+  height: 0;
+  overflow: hidden;
+}
+.disco__container.open {
+  opacity: 1;
+  height: auto;
+}
+
+.covers {
   display: flex;
   justify-content: center;
   align-items: center;
