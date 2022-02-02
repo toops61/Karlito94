@@ -258,6 +258,7 @@ header nav ul li:hover {
 }
 
 .news-square, .press-container {
+  z-index: 10;
   border: solid white;
   padding: 2vw;
   border-radius: 1rem;
@@ -265,6 +266,18 @@ header nav ul li:hover {
 }
 .news-square p, .press-container p {
   margin: 0;
+}
+
+.maxi-big {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.maxi-big img {
+  height: 100%;
+  object-fit: cover;
 }
 
 #bio, #press, #disco {
@@ -275,7 +288,17 @@ header nav ul li:hover {
   margin-bottom: 3rem;
 }
 #bio .bio-container, #press .bio-container, #disco .bio-container {
+  transform: translateY(-800px);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
   margin: 0 10%;
+  transition: 400ms ease-in-out;
+}
+#bio .bio-container.open, #press .bio-container.open, #disco .bio-container.open {
+  transform: translateY(0);
+  opacity: 1;
+  height: auto;
 }
 #bio .bio-container p, #press .bio-container p, #disco .bio-container p {
   text-align: justify;
