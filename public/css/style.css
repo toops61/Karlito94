@@ -81,7 +81,7 @@ ul, li {
 
 @font-face {
   font-family: "Anton";
-  src: url(../fonts/Anton/Anton-regular.ttf) format("truetype");
+  src: url("../fonts/Anton/Anton-regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Font Awesome 5";
