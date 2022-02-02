@@ -64,6 +64,10 @@ ul, li {
 }
 
 @font-face {
+  font-family: "Anton";
+  src: url(../fonts/Anton/Anton-regular.ttf) format("truetype");
+}
+@font-face {
   font-family: "Font Awesome 5";
   font-style: normal;
   font-weight: 900;
@@ -89,6 +93,7 @@ ul, li {
 }
 * {
   color: white;
+  font-family: "Anton";
 }
 
 a {
@@ -372,7 +377,7 @@ header nav ul li:hover {
   flex-wrap: wrap;
 }
 
-div[class^=LP] {
+div[class^=LP], .maxi {
   margin: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -451,6 +456,19 @@ div[class^=LP] {
 .text-collab.text-clicked {
   white-space: normal;
   overflow: auto;
+}
+
+.press-container {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transform: translateY(-600px);
+  transition: 400ms ease-in-out;
+}
+.press-container.open {
+  transform: translateY(0);
+  opacity: 1;
+  height: auto;
 }
 
 #links {

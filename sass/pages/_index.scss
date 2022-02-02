@@ -113,7 +113,7 @@
     flex-wrap: wrap;
 }
 
-div[class^="LP"] {
+div[class^="LP"], .maxi {
     margin: 1rem 2rem;
     @include flexColumn;
 }
@@ -191,6 +191,16 @@ div[class^="LP"] {
 }
 
 .press-container {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transform: translateY(-600px);
+    transition: 400ms ease-in-out;
+    &.open {
+        transform: translateY(0);
+        opacity: 1;
+        height: auto;
+    }
     @extend .news-square;
 }
 
