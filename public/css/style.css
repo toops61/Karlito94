@@ -282,14 +282,14 @@ header nav ul li:hover {
   align-items: center;
 }
 
-.news-square, .press-container {
+.news-square, .press__container {
   z-index: 10;
   border: solid white;
   padding: 2vw;
   border-radius: 1rem;
   background-color: black;
 }
-.news-square p, .press-container p {
+.news-square p, .press__container p {
   margin: 0;
 }
 
@@ -458,14 +458,15 @@ div[class^=LP], .maxi {
   overflow: auto;
 }
 
-.press-container {
+.press__container {
   opacity: 0;
   height: 0;
   overflow: hidden;
   transform: translateY(-600px);
   transition: 400ms ease-in-out;
+  z-index: 0;
 }
-.press-container.open {
+.press__container.open {
   transform: translateY(0);
   opacity: 1;
   height: auto;

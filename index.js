@@ -59,3 +59,8 @@ function showTextCollabs(e) {
         clicked.parentNode.parentNode.childNodes[3].classList.toggle('text-clicked');
     }
 }
+
+function openPress() {
+    document.querySelector('.press__container').classList.toggle('open');
+}
+document.querySelector('#press h2').addEventListener('click', openPress);
