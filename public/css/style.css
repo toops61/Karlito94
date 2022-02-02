@@ -258,6 +258,7 @@ header nav ul li:hover {
 }
 
 .news-square, .press-container {
+  z-index: 10;
   border: solid white;
   padding: 2vw;
   border-radius: 1rem;
@@ -267,6 +268,18 @@ header nav ul li:hover {
   margin: 0;
 }
 
+.maxi-big {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.maxi-big img {
+  height: 100%;
+  object-fit: cover;
+}
+
 #bio, #press, #disco {
   display: flex;
   flex-direction: column;
@@ -274,17 +287,27 @@ header nav ul li:hover {
   align-items: center;
   margin-bottom: 3rem;
 }
-#bio .bio-container, #press .bio-container, #disco .bio-container {
+#bio .bio__container, #press .bio__container, #disco .bio__container {
+  transform: translateY(-800px);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
   margin: 0 10%;
+  transition: 400ms ease-in-out;
 }
-#bio .bio-container p, #press .bio-container p, #disco .bio-container p {
+#bio .bio__container.open, #press .bio__container.open, #disco .bio__container.open {
+  transform: translateY(0);
+  opacity: 1;
+  height: auto;
+}
+#bio .bio__container p, #press .bio__container p, #disco .bio__container p {
   text-align: justify;
 }
-#bio .bio-container .mafiak1fry, #press .bio-container .mafiak1fry, #disco .bio-container .mafiak1fry {
+#bio .bio__container .mafiak1fry, #press .bio__container .mafiak1fry, #disco .bio__container .mafiak1fry {
   float: left;
   height: 20vw;
 }
-#bio .bio-container .mafiak1fry img, #press .bio-container .mafiak1fry img, #disco .bio-container .mafiak1fry img {
+#bio .bio__container .mafiak1fry img, #press .bio__container .mafiak1fry img, #disco .bio__container .mafiak1fry img {
   height: 100%;
   object-fit: cover;
 }
@@ -313,7 +336,7 @@ header nav ul li:hover {
   transition: 300ms ease-in-out;
 }
 
-.covers {
+.disco__container .covers {
   display: flex;
   justify-content: center;
   align-items: center;

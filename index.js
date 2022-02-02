@@ -33,6 +33,12 @@ function showCollabs() {
     document.querySelector('.collab-section').classList.toggle('more');
 }
 
+function openBio() {
+    document.querySelector('.bio__container').classList.toggle('open');
+}
+
+document.querySelector('#bio').addEventListener('click', openBio);
+
 document.querySelector('.collabs-button').addEventListener('click', showCollabs);
 
 function showOthersCollabs() {
