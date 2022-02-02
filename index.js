@@ -40,6 +40,11 @@ document.querySelector('#bio h2').addEventListener('click', openBio);
 
 function openDisco() {
     document.querySelector('.disco__container').classList.toggle('open');
+    document.querySelector('.LP1').classList.toggle('appears');
+    document.querySelector('.LP2').classList.toggle('appears');
+    document.querySelector('.LP3').classList.toggle('appears');
+    document.querySelectorAll('.maxi')[0].classList.toggle('appears');
+    document.querySelectorAll('.maxi')[1].classList.toggle('appears');
 }
 document.querySelector('#disco h2').addEventListener('click', openDisco);
 

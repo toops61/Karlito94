@@ -118,6 +118,16 @@ div[class^="LP"], .maxi {
     @include flexColumn;
 }
 
+.LP1.appears,.maxi:nth-child(1).appears {
+    animation: left-appears 700ms forwards;
+}
+.LP2.appears {
+    animation: up-appears 700ms forwards;
+}
+.LP3.appears,.maxi:nth-child(2).appears {
+    animation: right-appears 700ms forwards;
+}
+
 .album-cover {
     @include flexCenter;
     height: 26vw;
