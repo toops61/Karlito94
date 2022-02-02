@@ -309,7 +309,7 @@ header nav ul li:hover {
   color: black;
 }
 #disco button p {
-  font-size: clamp(1rem, 1vw, 2rem);
+  font-size: clamp(1rem, 2vw, 4rem);
   transition: 300ms ease-in-out;
 }
 
@@ -325,9 +325,6 @@ div[class^=LP] {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-div[class^=LP] p {
-  font-size: clamp(1.2rem, 2vw, 3rem);
 }
 
 .album-cover {
