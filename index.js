@@ -36,7 +36,7 @@ function showCollabs() {
 function openBio() {
     document.querySelector('.bio__container').classList.toggle('open');
 }
-document.querySelector('#bio h2').addEventListener('click', openBio);
+document.querySelector('#bio button').addEventListener('click', openBio);
 
 function openDisco() {
     document.querySelector('.disco__container').classList.toggle('open');
@@ -46,7 +46,7 @@ function openDisco() {
     document.querySelectorAll('.maxi')[0].classList.toggle('appears');
     document.querySelectorAll('.maxi')[1].classList.toggle('appears');
 }
-document.querySelector('#disco h2').addEventListener('click', openDisco);
+document.querySelector('#disco button').addEventListener('click', openDisco);
 
 document.querySelector('.collabs-button').addEventListener('click', showCollabs);
 
@@ -66,6 +66,7 @@ function showTextCollabs(e) {
 }
 
 function openPress() {
-    document.querySelector('.press__container').classList.toggle('open');
+    const container = document.querySelector('.press__container');
+    container.classList.toggle('open');
 }
-document.querySelector('#press h2').addEventListener('click', openPress);
+document.querySelector('#press button').addEventListener('click', openPress);

@@ -4,6 +4,12 @@ body {
     background-color: black;
 }
 
+button {
+    background-color: inherit;
+    border: none;
+    margin: 1vw auto;
+}
+
 ul, li {
     list-style-type: none;
     margin: 0;
