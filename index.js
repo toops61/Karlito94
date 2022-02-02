@@ -40,3 +40,12 @@ function showOthersCollabs() {
 }
 
 document.querySelector('.others').addEventListener('click', showOthersCollabs);
+
+function showTextCollabs(e) {
+    const clicked = e.target;
+    if (clicked.tagName === 'P') {
+        clicked.classList.toggle('text-clicked');
+    } else if (clicked.tagName === 'IMG') {
+        clicked.parentNode.parentNode.childNodes[3].classList.toggle('text-clicked');
+    }
+}

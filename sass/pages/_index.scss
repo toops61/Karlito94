@@ -140,10 +140,19 @@ div[class^="LP"] {
     .albums-collab__cd {
             height: 15vw;
     }
-    p {
-        text-align: center;
-        font-size: 1rem;
-        width: 15vw;
+}
+
+.text-collab {
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 6rem);
+    width: 15vw;
+    min-width: 10rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &.text-clicked {
+        white-space: normal;
+        overflow: auto;
     }
 }
 

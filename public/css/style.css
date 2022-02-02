@@ -389,10 +389,19 @@ div[class^=LP] p {
 .other-collabs .albums-collab__cd {
   height: 15vw;
 }
-.other-collabs p {
+
+.text-collab {
   text-align: center;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.5vw, 6rem);
   width: 15vw;
+  min-width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-collab.text-clicked {
+  white-space: normal;
+  overflow: auto;
 }
 
 #links {
